@@ -38,8 +38,8 @@ const status = document.querySelector('#form-status');
 form?.addEventListener('submit', (event) => {
   event.preventDefault();
   const data = new FormData(form);
-  const subject = encodeURIComponent(`Contato pelo site - ${data.get('nome')}`);
-  const body = encodeURIComponent(`Nome: ${data.get('nome')}\nE-mail: ${data.get('email')}\n\nMensagem:\n${data.get('mensagem')}`);
-  window.location.href = `mailto:joaomarcos_luz@hotmail.com?subject=${subject}&body=${body}`;
-  if (status) status.textContent = 'Abrindo seu aplicativo de e-mail para enviar a mensagem.';
+  const message = encodeURIComponent(`Olá, João Marcos Luz! Vim pelo site.\n\nNome: ${data.get('nome')}\nE-mail: ${data.get('email')}\n\nMensagem:\n${data.get('mensagem')}`);
+  window.open(`https://wa.me/5568992586317?text=${message}`, '_blank', 'noopener,noreferrer');
+  if (status) status.textContent = 'Abrindo o WhatsApp da campanha com sua mensagem preenchida.';
+  form.reset();
 });
