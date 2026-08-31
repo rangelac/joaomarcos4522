@@ -24,3 +24,6 @@
 .proposal-accordion summary .deep-label{color:rgba(255,255,255,.55);font:500 10px "DM Sans",sans-serif}
 .proposal-accordion summary .deep-plus{color:var(--yellow);font:400 26px "DM Sans",sans-serif}
 @media(max-width:700px){.proposal-accordion summary .deep-title{font-size:17px}.proposal-accordion summary .deep-plus{font-size:23px}}
+/* Proposal summaries keep their labels horizontal; only the plus rotates when open. */
+.proposal-accordion summary span{transform:none!important}
+.proposal-accordion details[open] summary .deep-plus{transform:rotate(45deg)!important}
