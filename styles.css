@@ -18,3 +18,9 @@
 @media(max-width:700px){.hero-portrait{z-index:1}}
 @media(max-width:700px){.hero-portrait{bottom:-110px}}
 @media(max-width:700px){.hero-actions .text-link{max-width:135px;line-height:1.2}}
+/* Deep proposal accordions need to override the generic FAQ summary styling. */
+.proposal-accordion summary .deep-index{color:var(--yellow);font:600 13px "Space Grotesk",sans-serif}
+.proposal-accordion summary .deep-title{color:var(--white);font:600 22px "Space Grotesk",sans-serif}
+.proposal-accordion summary .deep-label{color:rgba(255,255,255,.55);font:500 10px "DM Sans",sans-serif}
+.proposal-accordion summary .deep-plus{color:var(--yellow);font:400 26px "DM Sans",sans-serif}
+@media(max-width:700px){.proposal-accordion summary .deep-title{font-size:17px}.proposal-accordion summary .deep-plus{font-size:23px}}
